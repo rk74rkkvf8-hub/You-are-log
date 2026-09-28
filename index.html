@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You are log</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #000;
+  color: white;
+  font-family: sans-serif;
+}
+
+body {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.video {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.video:nth-child(1) {
+  background: linear-gradient(135deg, #ff7eb3, #65c7f7);
+}
+
+.video:nth-child(2) {
+  background: linear-gradient(135deg, #845ec2, #d65db1);
+}
+
+.video:nth-child(3) {
+  background: linear-gradient(135deg, #008f7a, #00c9a7);
+}
+
+.video:nth-child(4) {
+  background: linear-gradient(135deg, #ffc75f, #ff9671);
+}
+
+.text {
+  position: absolute;
+  bottom: 70px;
+  left: 20px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.title {
+  font-size: 42px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="video">
+  <div class="title">You are log</div>
+  <div class="text">@user<br>なんかそれっぽい動画①</div>
+</div>
+
+<div class="video">
+  <div class="title">🌈</div>
+  <div class="text">@user<br>スクロールすると次へ！</div>
+</div>
+
+<div class="video">
+  <div class="title">✨</div>
+  <div class="text">@user<br>You are log ②</div>
+</div>
+
+<div class="video">
+  <div class="title">🎬</div>
+  <div class="text">@user<br>最後まで見てくれてありがとう！</div>
+</div>
+
+</body>
+</html>
