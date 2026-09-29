@@ -91,6 +91,31 @@ body {
 <div class="video">
   <video src="video-output-2AEC30E4-8BEC-425C-AEE4-371A144EF390-1.mp4" autoplay muted loop playsinline></video>
   <div class="text">@user<br>なんかそれっぽい動画①</div>
+
+<div class="comment-box">
+  <input id="name1" type="text" placeholder="名前">
+  <input id="comment1" type="text" placeholder="コメント">
+  <button onclick="addComment1()">送信</button>
+  <div id="comments1"></div>
+</div>
+
+<script>
+function addComment1() {
+  const name = document.getElementById("name1").value;
+  const comment = document.getElementById("comment1").value;
+
+  if (name === "" || comment === "") return;
+
+  const newComment = document.createElement("p");
+  newComment.textContent = name + "：" + comment;
+
+  document.getElementById("comments1").appendChild(newComment);
+
+  document.getElementById("name1").value = "";
+  document.getElementById("comment1").value = "";
+}
+</script>
+
 </div>
 
 <div class="video">
@@ -107,31 +132,6 @@ body {
   <div class="title">🎬</div>
   <div class="text">@user<br>最後まで見てくれてありがとう！</div>
 </div>
-
-<div class="comment-box">
-  <input id="nameInput" type="text" placeholder="名前">
-  <input id="commentInput" type="text" placeholder="コメント">
-  <button onclick="addComment()">送信</button>
-
-  <div id="comments"></div>
-</div>
-
-<script>
-function addComment() {
-  const name = document.getElementById("nameInput").value;
-  const comment = document.getElementById("commentInput").value;
-
-  if (name === "" || comment === "") return;
-
-  const newComment = document.createElement("p");
-  newComment.textContent = name + "：" + comment;
-
-  document.getElementById("comments").appendChild(newComment);
-
-  document.getElementById("nameInput").value = "";
-  document.getElementById("commentInput").value = "";
-}
-</script>
   
 </body>
 </html>
