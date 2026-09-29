@@ -87,5 +87,30 @@ body {
   <div class="text">@user<br>最後まで見てくれてありがとう！</div>
 </div>
 
+<div class="comment-box">
+  <input id="nameInput" type="text" placeholder="名前">
+  <input id="commentInput" type="text" placeholder="コメント">
+  <button onclick="addComment()">送信</button>
+
+  <div id="comments"></div>
+</div>
+
+<script>
+function addComment() {
+  const name = document.getElementById("nameInput").value;
+  const comment = document.getElementById("commentInput").value;
+
+  if (name === "" || comment === "") return;
+
+  const newComment = document.createElement("p");
+  newComment.textContent = name + "：" + comment;
+
+  document.getElementById("comments").appendChild(newComment);
+
+  document.getElementById("nameInput").value = "";
+  document.getElementById("commentInput").value = "";
+}
+</script>
+  
 </body>
 </html>
