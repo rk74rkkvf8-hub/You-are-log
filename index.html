@@ -65,7 +65,19 @@ right: auto;
 width: 280px;
 display: none;
 }
-
+.comment-button {
+  position: absolute;
+  right: 20px;
+  bottom: 120px;
+  z-index: 20;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  background: white;
+  color: black;
+  font-size: 14px;
+}
+  
 .comment-box input {
   display: block;
   width: 100%;
@@ -99,6 +111,8 @@ display: none;
   <video src="IMG_0244.mov" autoplay muted loop playsinline></video>
   <div class="text">@user<br>なんかそれっぽい動画①</div>
 
+<button class="comment-button" onclick="openComments()">💬 コメント</button>
+  
 <div class="comment-box">
   <input id="name1" type="text" placeholder="名前">
   <input id="comment1" type="text" placeholder="コメント">
@@ -107,6 +121,10 @@ display: none;
 </div>
 
 <script>
+function openComments() {
+  const box = document.querySelector(".comment-box");
+  box.style.display = "block";
+}
 function addComment1() {
   const name = document.getElementById("name1").value;
   const comment = document.getElementById("comment1").value;
