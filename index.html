@@ -92,6 +92,17 @@ body {
   line-height: 1.5;
 }
   
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 30;
+  border: none;
+  background: none;
+  color: black;
+  font-size: 24px;
+}
+  
 .comment-box button {
   padding: 10px 20px;
 }
@@ -121,6 +132,8 @@ body {
 <button class="comment-button" onclick="openComments()">💬 コメント</button>
   
 <div class="comment-box">
+  <button class="close-button" onclick="closeComments()">✕</button>
+  
   <input id="name1" type="text" placeholder="名前">
   <input id="comment1" type="text" placeholder="コメント">
   <button onclick="addComment1()">送信</button>
@@ -131,6 +144,10 @@ body {
 function openComments() {
   const box = document.querySelector(".comment-box");
   box.style.display = "block";
+}
+function closeComments() {
+  const box = document.querySelector(".comment-box");
+  box.style.display = "none";
 }
 function addComment1() {
   const name = document.getElementById("name1").value;
