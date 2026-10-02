@@ -140,7 +140,7 @@ body {
   <div id="comments1"></div>
 </div>
 
-<div class="comment-box">
+<div class="comment-box" id="commentBox2">
   <button class="close-button" onclick="closeComments2()">✕</button>
 
   <input id="name2" type="text" placeholder="名前">
@@ -156,8 +156,7 @@ function openComments() {
 }
 
 function openComments2() {
-  const boxes = document.querySelectorAll(".comment-box");
-  boxes[1].style.display = "block";
+  document.getElementById("commentBox2").style.display = "block";
 }
 
 function closeComments2() {
