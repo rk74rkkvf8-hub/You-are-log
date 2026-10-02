@@ -130,15 +130,6 @@ body {
   <div class="text">@user<br>なんかそれっぽい動画①</div>
 
 <button class="comment-button" onclick="openComments()">💬 コメント</button>
-
-<div class="comment-box">
-  <button class="close-button" onclick="closeComments2()">✕</button>
-
-  <input id="name2" type="text" placeholder="名前">
-  <input id="comment2" type="text" placeholder="コメント">
-  <button onclick="addComment2()">送信</button>
-  <div id="comments2"></div>
-</div>
   
 <div class="comment-box">
   <button class="close-button" onclick="closeComments()">✕</button>
@@ -147,6 +138,15 @@ body {
   <input id="comment1" type="text" placeholder="コメント">
   <button onclick="addComment1()">送信</button>
   <div id="comments1"></div>
+</div>
+
+<div class="comment-box">
+  <button class="close-button" onclick="closeComments2()">✕</button>
+
+  <input id="name2" type="text" placeholder="名前">
+  <input id="comment2" type="text" placeholder="コメント">
+  <button onclick="addComment2()">送信</button>
+  <div id="comments2"></div>
 </div>
 
 <script>
