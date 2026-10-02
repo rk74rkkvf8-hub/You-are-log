@@ -130,6 +130,15 @@ body {
   <div class="text">@user<br>なんかそれっぽい動画①</div>
 
 <button class="comment-button" onclick="openComments()">💬 コメント</button>
+
+<div class="comment-box">
+  <button class="close-button" onclick="closeComments2()">✕</button>
+
+  <input id="name2" type="text" placeholder="名前">
+  <input id="comment2" type="text" placeholder="コメント">
+  <button onclick="addComment2()">送信</button>
+  <div id="comments2"></div>
+</div>
   
 <div class="comment-box">
   <button class="close-button" onclick="closeComments()">✕</button>
@@ -145,6 +154,32 @@ function openComments() {
   const box = document.querySelector(".comment-box");
   box.style.display = "block";
 }
+
+function openComments2() {
+  const boxes = document.querySelectorAll(".comment-box");
+  boxes[1].style.display = "block";
+}
+
+function closeComments2() {
+  const boxes = document.querySelectorAll(".comment-box");
+  boxes[1].style.display = "none";
+}
+
+function addComment2() {
+  const name = document.getElementById("name2").value;
+  const comment = document.getElementById("comment2").value;
+
+  if (name === "" || comment === "") return;
+
+  const newComment = document.createElement("p");
+  newComment.textContent = name + "：" + comment;
+
+  document.getElementById("comments2").appendChild(newComment);
+
+  document.getElementById("name2").value = "";
+  document.getElementById("comment2").value = "";
+}
+  
 function closeComments() {
   const box = document.querySelector(".comment-box");
   box.style.display = "none";
@@ -170,6 +205,8 @@ function addComment1() {
 <div class="video">
   <div class="title">🌈</div>
   <div class="text">@user<br>スクロールすると次へ！</div>
+
+  <button class="comment-button" onclick="openComments2()">💬 コメント</button>
 </div>
 
 <div class="video">
