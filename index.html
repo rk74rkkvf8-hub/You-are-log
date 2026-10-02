@@ -140,15 +140,6 @@ body {
   <div id="comments1"></div>
 </div>
 
-<div class="comment-box" id="commentBox2">
-  <button class="close-button" onclick="closeComments2()">✕</button>
-
-  <input id="name2" type="text" placeholder="名前">
-  <input id="comment2" type="text" placeholder="コメント">
-  <button onclick="addComment2()">送信</button>
-  <div id="comments2"></div>
-</div>
-
 <script>
 function openComments() {
   const box = document.querySelector(".comment-box");
@@ -206,6 +197,15 @@ function addComment1() {
   <div class="text">@user<br>スクロールすると次へ！</div>
 
   <button class="comment-button" onclick="openComments2()">💬 コメント</button>
+  
+  <div class="comment-box" id="commentBox2">
+  <button class="close-button" onclick="closeComments2()">✕</button>
+
+  <input id="name2" type="text" placeholder="名前">
+  <input id="comment2" type="text" placeholder="コメント">
+  <button onclick="addComment2()">送信</button>
+  <div id="comments2"></div>
+ </div>
 </div>
 
 <div class="video">
