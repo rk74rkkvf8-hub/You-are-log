@@ -211,6 +211,29 @@ function addComment3() {
   document.getElementById("name3").value = "";
   document.getElementById("comment3").value = "";
 }
+
+function openComments4() {
+  document.getElementById("commentBox4").style.display = "block";
+}
+
+function closeComments4() {
+  document.getElementById("commentBox4").style.display = "none";
+}
+
+function addComment4() {
+  const name = document.getElementById("name4").value;
+  const comment = document.getElementById("comment4").value;
+
+  if (name === "" || comment === "") return;
+
+  const newComment = document.createElement("p");
+  newComment.textContent = name + "：" + comment;
+
+  document.getElementById("comments4").appendChild(newComment);
+
+  document.getElementById("name4").value = "";
+  document.getElementById("comment4").value = "";
+}
 </script>
 
 </div>
@@ -250,6 +273,18 @@ function addComment3() {
 <div class="video">
   <div class="title">🎬</div>
   <div class="text">@user<br>最後まで見てくれてありがとう！</div>
+
+  <button class="comment-button" onclick="openComments4()">💬 コメント</button>
+
+<div class="comment-box" id="commentBox4">
+  <button class="close-button" onclick="closeComments4()">✕</button>
+
+  <input id="name4" type="text" placeholder="名前">
+  <input id="comment4" type="text" placeholder="コメント">
+  <button onclick="addComment4()">送信</button>
+  <div id="comments4"></div>
+</div>
+  
 </div>
   
 </body>
